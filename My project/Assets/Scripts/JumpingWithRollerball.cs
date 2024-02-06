@@ -8,8 +8,9 @@ public class JumpingWithRollerball : MonoBehaviour
     public float MoveSpeed = 1f;
     public float GravityModifier = 1f;
     public bool IsOnGround = true;
-
+    public float OutOfBounds = -10f;
     float horizontalInput;
+    private Vector3 _startingPosition;
     float verticalInput;
 
     private Rigidbody _playerRb;
@@ -19,7 +20,10 @@ public class JumpingWithRollerball : MonoBehaviour
     {
         _playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= GravityModifier;
+        _startingPosition = transform.position;
     }
+
+   
 
     // Update is called once per frame
     void Update()
@@ -34,6 +38,11 @@ public class JumpingWithRollerball : MonoBehaviour
 
         Vector3 movement = new Vector3(horizontalInput, 0.0f, verticalInput);
         _playerRb.AddForce(movement * MoveSpeed);
+
+        if(transform.position.y < OutOfBounds)
+    {
+        transform.position = _startingPosition;
+    }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -43,4 +52,13 @@ public class JumpingWithRollerball : MonoBehaviour
             IsOnGround = true;
         }
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Checkpoint"))
+    {
+        _startingPosition = other.gameObject.transform.position;
+    }
+    }
+    
 }
