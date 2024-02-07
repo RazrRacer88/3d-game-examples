@@ -10,7 +10,10 @@ public class JumpingWithRollerball : MonoBehaviour
     public bool IsOnGround = true;
     public float OutOfBounds = -10f;
     float horizontalInput;
+    private bool _isAtCheckpoint = false;
+    private bool _checkpointPosition = false;
     private Vector3 _startingPosition;
+    private Vector3 _checkpointposition;
     float verticalInput;
 
     private Rigidbody _playerRb;
@@ -41,7 +44,14 @@ public class JumpingWithRollerball : MonoBehaviour
 
         if(transform.position.y < OutOfBounds)
     {
-        transform.position = _startingPosition;
+        if(_isAtCheckpoint)
+        {
+        transform.position = _checkpointposition;
+        }
+        else
+        {
+         transform.position = _startingPosition;
+        }
     }
     }
 
@@ -57,7 +67,12 @@ public class JumpingWithRollerball : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Checkpoint"))
     {
-        _startingPosition = other.gameObject.transform.position;
+        _isAtCheckpoint = true;
+        _checkpointposition = other.gameObject.transform.position;
+    }
+    if(other.gameObject.CompareTag("Endpoint"))
+    {
+        transform.position = _startingPosition;
     }
     }
     
