@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class JumpingWithRollerball : MonoBehaviour
 {
+    public TextMeshProUGUI scoreText;
     public float JumpForce = 10f;
+    public int score = 0;
     public float MoveSpeed = 1f;
     public float GravityModifier = 1f;
     public bool IsOnGround = true;
@@ -24,6 +29,7 @@ public class JumpingWithRollerball : MonoBehaviour
         _playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= GravityModifier;
         _startingPosition = transform.position;
+        scoreText.text = "Score" + score.ToString();
     }
 
    
@@ -61,6 +67,18 @@ public class JumpingWithRollerball : MonoBehaviour
         {
             IsOnGround = true;
         }
+
+        if(collision.gameObject.CompareTag("Dead zone"))
+        {
+            if(_isAtCheckpoint)
+            {
+                transform.position = _checkpointposition;
+            }
+            else
+            {
+                transform.position = _startingPosition;
+            }
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -73,6 +91,13 @@ public class JumpingWithRollerball : MonoBehaviour
     if(other.gameObject.CompareTag("Endpoint"))
     {
         transform.position = _startingPosition;
+    }
+
+    if(other.gameObject.CompareTag("Collectible"))
+    {
+        score++;
+        scoreText.text = "Score" + score.ToString();
+        Destroy(other.gameObject);
     }
     }
     

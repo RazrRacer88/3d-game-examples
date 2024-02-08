@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Checkpoint
   - Endpoint
+  - Collectible
+  - Dead zone
   layers:
   - Default
   - TransparentFX
