@@ -492,7 +492,7 @@ Transform:
   m_GameObject: {fileID: 249163376}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40660775, y: 0.5785068, z: 0.40660775, w: 0.5785068}
-  m_LocalPosition: {x: 11.376687, y: 4.94, z: 44.509987}
+  m_LocalPosition: {x: 11.376687, y: 4.76, z: 44.21}
   m_LocalScale: {x: 1.7758772, y: 2.3631647, z: 2.9325614}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -856,13 +856,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459480049}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 11.368891, y: 5.94, z: 50.26584}
-  m_LocalScale: {x: 5, y: -1.307228, z: 3}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 11.368891, y: 5.9399986, z: 50.265827}
+  m_LocalScale: {x: -1, y: 5, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 634059466}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!65 &459480051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1166,13 +1166,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533042017}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.71760917, z: -0, w: 0.69644606}
+  m_LocalRotation: {x: 0, y: -0.7132504, z: 0, w: 0.7009094}
   m_LocalPosition: {x: 4.858886, y: 3.8340466, z: 24.435835}
   m_LocalScale: {x: 2, y: 3, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 634059466}
-  m_LocalEulerAnglesHint: {x: 0, y: 91.715, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -91, z: 0}
 --- !u!1 &563320460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,13 +1518,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659923955}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0.858886, y: 3.8340466, z: 22.305836}
   m_LocalScale: {x: 2, y: 3, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 634059466}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &685560918
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,13 +2359,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872726963}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.49361578, y: 0.4936159, z: -0.5063037, w: 0.5063037}
+  m_LocalRotation: {x: 0.4936156, y: -0.4936156, z: 0.50630397, w: 0.50630397}
   m_LocalPosition: {x: 11.334688, y: 5.256047, z: 31.445835}
   m_LocalScale: {x: 2.933165, y: 4.308582, z: 0.001079691}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 634059466}
-  m_LocalEulerAnglesHint: {x: 88.546, y: -90, z: -90}
+  m_LocalEulerAnglesHint: {x: 88.546, y: 0, z: 90}
 --- !u!65 &872726965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2852,13 +2852,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120329343}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 4.2488856, y: 4.8420467, z: 15.455834}
-  m_LocalScale: {x: 5, y: 1.8000001, z: 10}
+  m_LocalScale: {x: 10, y: 1.8000001, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 634059466}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1200696797
 GameObject:
   m_ObjectHideFlags: 0
@@ -4482,13 +4482,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122858828}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 4.1888847, y: 4.5360465, z: 8.465834}
-  m_LocalScale: {x: 5, y: 0.909234, z: 10}
+  m_LocalScale: {x: 10, y: 0.909234, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 634059466}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &2135978431
 GameObject:
   m_ObjectHideFlags: 0
