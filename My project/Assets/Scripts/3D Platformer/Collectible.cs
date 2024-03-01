@@ -11,7 +11,7 @@ public class Collectible : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+         scoreText.text = "Score" + score.ToString();
     }
 
     // Update is called once per frame
@@ -22,11 +22,11 @@ public class Collectible : MonoBehaviour
 
      void OnTriggerEnter(Collider other)
     {
-    if(other.gameObject.CompareTag("Collectible"))
+    if(other.gameObject.CompareTag("Player"))
     {
         score++;
         scoreText.text = "Score" + score.ToString();
-        Destroy(other.gameObject);
+        Destroy(this.gameObject);
     }
     }
 }
